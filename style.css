@@ -75,6 +75,7 @@ a {
 .rating-buttons label:hover {
   background-color: var(--primary-orange);
   color: var(--white);
+  cursor: pointer;
 }
 
 .rating-radio:checked + label {
