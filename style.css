@@ -1,0 +1,138 @@
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --primary-orange-hover: hsl(25, 97%, 83%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --darker-blue: hsl(213, 19%, 23%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --dark-purple: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.25rem;
+  letter-spacing: 0.075em;
+  margin-top: 1.5em;
+}
+
+p {
+  font-size: 0.938rem;
+  color: var(--light-grey);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.support-request-container,
+.thank-you-container {
+  margin: 7em auto 1.5em;
+  max-width: 22em;
+  background-color: var(--dark-blue);
+  padding: 1.5em;
+  border-radius: 1em;
+}
+
+.thank-you-container {
+  display: none;
+}
+
+.circle {
+  background-color: var(--darker-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 2.5em;
+  margin: 0.75em 0;
+  border-radius: 50%;
+  color: var(--light-grey);
+}
+
+.rating-radio {
+  display: none;
+}
+
+.rating-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.rating-buttons label:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.rating-radio:checked + label {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.submit-btn {
+  display: block;
+  margin: 1.5em 0 0;
+  padding: 1em;
+  background-color: var(--primary-orange);
+  border-radius: 2em;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+
+.thank-you-container {
+  text-align: center;
+}
+
+.thank-you-container img {
+  padding: 1em;
+}
+
+.selected-rating {
+  background-color: var(--darker-blue);
+  border-radius: 2em;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  display: inline-block;
+  color: var(--primary-orange);
+}
+
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: var(--dark-purple);
+}
+
+@media screen and (min-width: 30em) {
+  .support-request-container,
+  .thank-you-container {
+    padding: 1.5em;
+    border-radius: 1em;
+    max-width: 20em;
+  }
+}
